@@ -6,6 +6,7 @@ import TicketDetail from "./TicketDetail";
 import EditTicketForm from "./EditTicketForm";
 import PropTypes from "prop-types";
 import * as a from "./../actions";
+import Moment from "moment";
 
 class TicketControl extends React.Component {
   constructor(props) {
@@ -15,6 +16,26 @@ class TicketControl extends React.Component {
       editing: false,
     };
   }
+
+  componentDidMount() {
+    this.waitTimeUpdateTimer = setInterval(
+      () => this.updateTicketElapsedWaitTime(),
+      1000
+    );
+  }
+
+  componentDidUpdate() {
+    console.log("component updated!");
+  }
+
+  componentWillUnmount() {
+    console.log("component unmounted!");
+    clearInterval(this.waitTimeUpdateTimer);
+  }
+
+  updateTicketElapsedWaitTime = () => {
+    console.log("tick");
+  };
 
   handleClick = () => {
     if (this.state.selectedTicket != null) {

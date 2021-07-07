@@ -6,7 +6,8 @@ function TicketDetail(props) {
 
   return (
     <React.Fragment>
-      <h1>Ticket Detail</h1>
+      <hr />
+      <h2>Ticket Detail</h2>
       <h3>
         {ticket.location} - {ticket.names}
       </h3>

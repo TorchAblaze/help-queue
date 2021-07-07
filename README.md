@@ -18,8 +18,8 @@ Software Requirements
 Open via Bash/GitBash:
 
 1. Clone this repository onto your computer:
-   `git clone https://github.com/TorchAblaze/tap-room.git`
-2. Navigate into the `tap-room` directory, and open in Visual Studio Code or preferred text editor
+   `git clone https://github.com/TorchAblaze/help-queue.git`
+2. Navigate into the `help-queue` directory, and open in Visual Studio Code or preferred text editor
 3. Run `npm install` to install the dependencies
 4. Run `npm start` to view the application
 

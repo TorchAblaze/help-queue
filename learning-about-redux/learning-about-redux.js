@@ -1,9 +1,10 @@
 // REDUCER - this is the same code we wrote in our previous app.
+import * as c from "./../actions/ActionTypes";
 
 const ticketListReducer = (state = {}, action) => {
   const { names, location, issue, id } = action;
   switch (action.type) {
-    case "ADD_TICKET":
+    case c.ADD_TICKET:
       return Object.assign({}, state, {
         [id]: {
           names: names,
@@ -12,7 +13,7 @@ const ticketListReducer = (state = {}, action) => {
           id: id,
         },
       });
-    case "DELETE_TICKET":
+    case c.DELETE_TICKET:
       const newState = { ...state };
       delete newState[id];
       return newState;
@@ -54,7 +55,7 @@ console.log(`
 const unsubscribe = store.subscribe(() => console.log(store.getState()));
 
 store.dispatch({
-  type: "ADD_TICKET",
+  type: c.ADD_TICKET,
   names: "Jasmine and Justine",
   location: "2a",
   issue: "Reducer has side effects.",
@@ -62,7 +63,7 @@ store.dispatch({
 });
 
 store.dispatch({
-  type: "ADD_TICKET",
+  type: c.ADD_TICKET,
   names: "Brann and Rose",
   location: "3b",
   issue: "Problems understanding Redux.",
@@ -70,7 +71,7 @@ store.dispatch({
 });
 
 store.dispatch({
-  type: "DELETE_TICKET",
+  type: c.DELETE_TICKET,
   id: 1,
 });
 

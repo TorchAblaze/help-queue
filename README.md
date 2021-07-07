@@ -23,7 +23,7 @@ Open via Bash/GitBash:
 3. Run `npm install` to install the dependencies
 4. Run `npm start` to view the application
 
-## Known Bugs
+## Known Bugs 🐞
 
 _No known bugs_
 
